@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axiosInstance, { setAuthToken } from '../../src/config/axiosInstance';
 import {
   View,
   Text,
@@ -32,6 +33,7 @@ export default function Login() {
       });
       
       dispatch(setCredentials(response.data));
+      setAuthToken(response.data.token);
       router.replace('/app');
     } catch (err) {
       setError(err?.response?.data?.error || 'Login failed');

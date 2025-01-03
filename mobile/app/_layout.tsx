@@ -15,13 +15,13 @@ export default function RootLayout() {
             }} 
           />
           <Stack.Screen 
-            name="(auth)" 
+            name="auth" 
             options={{ 
               headerShown: false 
             }} 
           />
           <Stack.Screen 
-            name="(app)" 
+            name="app" 
             options={{ 
               headerShown: false 
             }} 

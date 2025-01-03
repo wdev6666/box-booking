@@ -11,6 +11,7 @@ const propertyRoutes = require('./routes/property');
 const webhookRoutes = require('./routes/webhook');
 const reportRoutes = require('./routes/report');
 const guestRoutes = require('./routes/guest');
+const bookingRoutes = require('./routes/booking');
 
 const app = express();
 
@@ -37,6 +38,7 @@ app.use('/api/properties', propertyRoutes);
 app.use('/webhooks', webhookRoutes);
 app.use('/api/reports', reportRoutes);
 app.use('/api', guestRoutes);
+app.use('/api', bookingRoutes);
 
 // 404 handler
 app.use((req, res, next) => {

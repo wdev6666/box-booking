@@ -31,6 +31,15 @@ export default function AppLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="box"
+        options={{
+          title: 'My Boxes',
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons name="person" size={24} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 } 
