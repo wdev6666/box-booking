@@ -12,7 +12,8 @@ export default function AppScreen() {
           try {
               const response = await axiosInstance.get(`${API_BASE_URL}/properties/my-properties`);
             //   const data = await response.json();
-              setBoxData(response.data);
+              setBoxData(response.data.properties);
+            //   console.log("properties", response.data.properties)
           } catch (error) {
               console.error(error);
           } finally {

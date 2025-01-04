@@ -36,6 +36,8 @@ const createProperty = async (req, res) => {
             }
         }
 
+        console.log("providerId", providerId);
+
         // Create property record
         const { data: property, error } = await supabase
             .from('properties')
