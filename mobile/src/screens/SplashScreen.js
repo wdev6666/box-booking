@@ -17,7 +17,7 @@ const SplashScreen = () => {
             } else {
                 navigation.replace('Auth');
             }
-        }, 2000);
+        }, 500);
 
         return () => clearTimeout(timer);
     }, [isAuthenticated, navigation]);

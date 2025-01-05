@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, ActivityIndicator, StyleSheet } from 'react-native';
 import { API_BASE_URL } from '../../src/config/api';
-import axiosInstance from '../../src/config/axiosInstance';
+// import axiosInstance from '../../src/config/axiosInstance';
+import api from '../../src/services/api';
 
 export default function AppScreen() {
   const [boxData, setBoxData] = useState([]);
@@ -10,9 +11,9 @@ export default function AppScreen() {
   useEffect(() => {
       const fetchBoxData = async () => {
           try {
-              const response = await axiosInstance.get(`${API_BASE_URL}/properties/my-properties`);
+              const response = await api.get(`${API_BASE_URL}/properties/my-properties`);
             //   const data = await response.json();
-              setBoxData(response.data);
+              setBoxData(response.data.properties);
           } catch (error) {
               console.error(error);
           } finally {

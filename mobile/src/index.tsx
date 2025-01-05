@@ -17,7 +17,7 @@ export default function Index() {
       } else {
         router.replace('/auth/login');
       }
-    }, 2000);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, [isAuthenticated]);
