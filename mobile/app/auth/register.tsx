@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import { useRouter } from 'expo-router';
-import api from '../../src/services/api';
+import api from '../services/api';
 
 export default function Register() {
   const [formData, setFormData] = useState({

@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { View, Image, StyleSheet, Dimensions } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useSelector } from 'react-redux';
-import { selectIsAuthenticated } from '../src/store/slices/authSlice';
+import { selectIsAuthenticated } from './store/slices/authSlice';
 
 const { width } = Dimensions.get('window');
 

@@ -25,7 +25,7 @@ const SplashScreen = () => {
     return (
         <View style={styles.container}>
             <Image
-                source={require('../assets/BoxWelcome.png')}
+                source={require('../../assets/BoxWelcome.png')}
                 style={styles.logo}
                 resizeMode="center"
             />

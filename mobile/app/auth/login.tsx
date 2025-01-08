@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axiosInstance, { setAuthToken } from '../../src/config/axiosInstance';
+import axiosInstance, { setAuthToken } from '../config/axiosInstance';
 import {
   View,
   Text,
@@ -13,8 +13,8 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useDispatch, useSelector } from 'react-redux';
-import { setCredentials, selectAuthLoading } from '../../src/store/slices/authSlice';
-import api from '../../src/services/api';
+import { setCredentials, selectAuthLoading } from '../store/slices/authSlice';
+import api from '../services/api';
 
 export default function Login() {
   const [email, setEmail] = useState('');

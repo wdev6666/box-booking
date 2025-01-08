@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, Button } from 'react-native';
 import { useDispatch } from 'react-redux';
-import { logout } from '../../src/store/slices/authSlice';
+import { logout } from '../../store/slices/authSlice';
 import { useRouter } from 'expo-router';
 
 export default function AppScreen() {

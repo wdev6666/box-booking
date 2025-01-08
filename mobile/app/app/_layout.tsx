@@ -1,15 +1,17 @@
-import { Tabs } from 'expo-router';
-import { MaterialIcons } from '@expo/vector-icons';
+import { Stack } from 'expo-router';
 import { useSelector } from 'react-redux';
-import UserDashboard from "../components/UserDashboard";
-import ProviderDashboard from "../components/ProviderDashboard";
 
 export default function AppLayout() {
   const auth = useSelector((state) => state.auth);
   const role = auth?.user?.user_metadata?.role;
 
-    if(role === "User")
-      return <UserDashboard />
-    if(role === "Provider")
-      return <ProviderDashboard />
+  if (role === 'User') {
+    return <Stack screenOptions={{ headerShown: false }} initialRouteName="/user/home" />;
+  }
+
+  if (role === 'Provider') {
+    return <Stack screenOptions={{ headerShown: false }} initialRouteName="/provider/box" />;
+  }
+
+  return null; // Fallback in case role is undefined
 }

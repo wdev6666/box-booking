@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, ActivityIndicator, StyleSheet } from 'react-native';
-import { API_BASE_URL } from '../../src/config/api';
+import { API_BASE_URL } from '../../config/api';
 // import axiosInstance from '../../src/config/axiosInstance';
-import api from '../../src/services/api';
+import api from '../../services/api';
 
 export default function AppScreen() {
   const [boxData, setBoxData] = useState([]);
