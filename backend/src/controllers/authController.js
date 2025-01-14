@@ -1,6 +1,7 @@
 const supabase = require('../config/supabase');
 
 const register = async (req, res) => {
+    console.log("req", req)
     try {
         const { name, email, password, role } = req.body;
 

@@ -24,9 +24,6 @@
         "backgroundColor": "#ffffff"
       }
     },
-    "scheme": "box-cricket",
-    "plugins": [
-      "expo-router"
-    ]
+    "scheme": "box-cricket"
   }
 }
