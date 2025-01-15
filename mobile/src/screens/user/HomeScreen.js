@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, FlatList, Image, StyleSheet } from 'react-native';
 import { useSelector } from 'react-redux';
+import BoxScreen from './BoxScreen';
 
 const HomeScreen = () => {
   const { firstName } = useSelector((state) => state.auth);
@@ -25,13 +26,7 @@ const HomeScreen = () => {
 
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Popular Grounds</Text>
-        <FlatList
-          data={popularGrounds}
-          renderItem={renderGroundItem}
-          keyExtractor={(item) => item.id}
-          horizontal
-          showsHorizontalScrollIndicator={false}
-        />
+        <BoxScreen />
       </View>
     </View>
   );
@@ -40,17 +35,17 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
-    backgroundColor: '#000',
+    // padding: 20,
+    backgroundColor: '#fff',
   },
   greeting: {
     fontSize: 24,
-    color: '#fff',
+    color: '#000',
     fontWeight: 'bold',
   },
   subtitle: {
     fontSize: 18,
-    color: '#fff',
+    color: '#000',
     marginBottom: 20,
   },
   section: {
