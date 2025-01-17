@@ -6,7 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 // Screens
 import LoginScreen from '../screens/auth/LoginScreen';
-import HomeScreen from '../screens/user/HomeScreen';
+import BoxesScreen from '../screens/user/BoxesScreen';
 import ProfileScreen from '../screens/user/ProfileScreen';
 import BookingsScreen from '../screens/user/BookingsScreen';
 import BoxScreen from '../screens/provider/BoxScreen';
@@ -43,7 +43,7 @@ const UserNavigator = () => (
       return <Ionicons name={iconName} size={size} color={color} />
     },
   })}>
-    <UserTab.Screen name="Home" component={HomeScreen} />
+    <UserTab.Screen name="Home" component={BoxesScreen} />
     <UserTab.Screen name="Bookings" component={BookingsScreen} />
     <UserTab.Screen name="Profile" component={ProfileScreen} />
   </UserTab.Navigator>
