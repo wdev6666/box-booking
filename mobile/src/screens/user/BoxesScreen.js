@@ -48,12 +48,13 @@ const BoxesScreen = () => {
           flex: 1,
           overflowY: "auto", // Enables vertical scrolling
           padding: 2,
+          paddingBottom: 8,
           marginBottom: 1
         }}
       >
         <Grid container spacing={2}>
           {facilities.map((facility) => (
-            <Grid item xs={12} key={facility.id}>
+            <Grid item xs={12} marginBottom={1} key={facility.id}>
               <Card
                 sx={{
                   display: "flex",
@@ -66,7 +67,7 @@ const BoxesScreen = () => {
                 <Box position="relative" sx={{ height: "60%" }}>
                   <CardMedia
                     component="img"
-                    image={facility.image}
+                    image={facility.images[0]}
                     alt={facility.name}
                     sx={{ height: "100%", width: "100%", objectFit: "cover" }}
                   />
